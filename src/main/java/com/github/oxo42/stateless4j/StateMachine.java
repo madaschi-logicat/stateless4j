@@ -1,8 +1,16 @@
 package com.github.oxo42.stateless4j;
 
-import com.github.oxo42.stateless4j.delegates.*;
+import com.github.oxo42.stateless4j.delegates.Action1;
+import com.github.oxo42.stateless4j.delegates.Action2;
+import com.github.oxo42.stateless4j.delegates.Action3;
+import com.github.oxo42.stateless4j.delegates.Func;
+import com.github.oxo42.stateless4j.delegates.Trace;
 import com.github.oxo42.stateless4j.transitions.Transition;
-import com.github.oxo42.stateless4j.triggers.*;
+import com.github.oxo42.stateless4j.triggers.TriggerBehaviour;
+import com.github.oxo42.stateless4j.triggers.TriggerWithParameters;
+import com.github.oxo42.stateless4j.triggers.TriggerWithParameters1;
+import com.github.oxo42.stateless4j.triggers.TriggerWithParameters2;
+import com.github.oxo42.stateless4j.triggers.TriggerWithParameters3;
 
 import java.util.ArrayList;
 import java.util.List;

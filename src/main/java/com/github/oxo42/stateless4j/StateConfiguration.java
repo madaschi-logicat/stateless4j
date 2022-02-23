@@ -979,6 +979,11 @@ public class StateConfiguration<S, T> {
         );
     }
 
+    public StateConfiguration<S, T> clearActions() {
+        representation.clearActions();
+        return this;
+    }
+
     void enforceNotIdentityTransition(S destination) {
         if (destination.equals(representation.getUnderlyingState())) {
             throw new IllegalStateException("Permit() (and PermitIf()) require that the destination state is not equal to the source state. To accept a trigger without changing state, use either ignore(), permitInternal() or permitReentry().");
@@ -1021,4 +1026,6 @@ public class StateConfiguration<S, T> {
         representation.addTriggerBehaviour(new DynamicTriggerBehaviour<>(trigger, destinationStateSelector, guard, action));
         return this;
     }
+
+
 }

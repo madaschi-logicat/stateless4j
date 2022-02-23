@@ -27,6 +27,12 @@ public class StateRepresentation<S, T> {
         return triggerBehaviours;
     }
 
+    public void clearActions() {
+        triggerBehaviours.clear();
+        entryActions.clear();
+        exitActions.clear();
+    }
+
     public Boolean canHandle(T trigger) {
         return tryFindHandler(trigger) != null;
     }

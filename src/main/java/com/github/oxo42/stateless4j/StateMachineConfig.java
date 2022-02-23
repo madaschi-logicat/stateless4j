@@ -126,6 +126,12 @@ public class StateMachineConfig<TState, TTrigger> {
         return configuration;
     }
 
+    public void clearActions() {
+        for (StateRepresentation<TState, TTrigger> repr : stateConfiguration.values()) {
+            repr.clearActions();
+        }
+    }
+
     public void generateDotFileInto(final OutputStream dotFile) throws IOException {
         generateDotFileInto(dotFile, false);
     }
